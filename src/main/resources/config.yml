@@ -1,0 +1,13 @@
+### PlaceHolders ->
+### %distance% - Distance beetwen Player and NPC
+### %player% - Player Name
+### %npc% - NPC Name
+### %locx%, %locy%, %locz% - Location points
+### %action% - Current Action
+
+messages:
+  createnpc: '&b%npc% successfully created by %player%!'
+  deletenpc: '&c%npc% deleted by %player%!'
+  npcinfoasconsole: '&bSeeing informations about %npc% -  &aLocation: %locx%, %locy%, %locz% - &aAction: %action%'
+  npcinfoasplayer: '&bSeeing informations about %npc% -  &aLocation: %locx%, %locy%, %locz% - &aDistance: %distance% - &aAction: %action%'
+  startaction: '&c%npc% is now %action%.'

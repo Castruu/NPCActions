@@ -1,0 +1,38 @@
+name: NPCActions
+version: ${project.version}
+main: com.draxy.npc.NPCActions
+api-version: 1.16
+authors: [ Castruu ]
+description: Plugin that makes npcs execute actions
+commands:
+  attack:
+    description: Makes the nearest NPC attack
+    usage: Arguments error, /attack <right | left> <interval>
+    permission: npcactions.attack
+  jump:
+    description: Makes the nearest NPC jump
+    usage: Arguments error, use /jump
+    permission: npcactions.jump
+  crouch:
+    description: Makes the nearest NPC crouch
+    usage: Arguments error, /crouch <interval>
+    permission: npcactions.crouch
+  createnpc:
+    description: Makes the nearest NPC crouch
+    usage: Arguments error, /createnpc <name>
+    permission: npcactions.createnpc
+  listnpcs:
+    description: Makes the nearest NPC crouch
+    usage: Arguments error, /listnpc
+    permission: npcactions.listnpc
+  deletenpc:
+    description: Makes the nearest NPC crouch
+    usage: Arguments error, /deletenpc <name>
+    permission: npcactions.deletenpc
+  npcinfo:
+    description: Tells you informations about the desired NPC
+    usage: Arguments error, /npcinfo <name>
+    permission: npcactions.infonpc
+  reloadnpcs:
+    description: Reload NPC config
+    permission: npcactions.reload
