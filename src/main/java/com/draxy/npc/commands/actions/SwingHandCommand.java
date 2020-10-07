@@ -38,8 +38,12 @@ public class SwingHandCommand implements CommandExecutor {
         int interval;
         try {
             interval = Integer.parseInt(args[1]);
+        if(interval <= 0) throw new IllegalArgumentException();
         } catch (NumberFormatException e) {
-            sender.sendMessage(Utils.color("&cThe second argument must be a number!"));
+             sender.sendMessage(Utils.color("&cThe second argument must be a number!"));
+             return true;
+        } catch (IllegalArgumentException e) {
+            sender.sendMessage(Utils.color("&cNumber must be positive!"));
             return true;
         }
         new SwingHandAction(interval, getHand(args[0])).action(npc);
