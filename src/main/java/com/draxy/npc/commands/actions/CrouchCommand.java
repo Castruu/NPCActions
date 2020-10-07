@@ -37,9 +37,13 @@ public class CrouchCommand implements CommandExecutor {
         int interval;
         try{
             interval = Integer.parseInt(args[0]);
+            if(interval <= 0) throw new IllegalArgumentException();
         } catch (NumberFormatException e) {
              sender.sendMessage(Utils.color("&cThe first argument must be a number!"));
              return true;
+        } catch (IllegalArgumentException e) {
+            sender.sendMessage(Utils.color("&cNumber must be positive!"));
+            return true;
         }
         new CrouchAction(interval).action(npc);
         player.sendMessage(Utils.placeHolderReplacement(ConfigurationManager.getInstance().STARTACTION, npc, player));
